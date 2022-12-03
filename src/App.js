@@ -63,7 +63,7 @@ class App extends Component {
 
           <div className='card-body'>
 
-            <h3 className='text-secondary p-1'>Add your task</h3>
+            <h3 className='text-gray-600 p-1 '>Add your task</h3>
 
             <input type='text' placeholder='Type your task' className=' form-control border border-secondary'
               value={this.state.newItem}
@@ -72,14 +72,14 @@ class App extends Component {
 
             <button className='btn btn-secondary mt-2' onClick={() => this.addItem()}>Add</button> <br />
 
-            <ol className='text-white bg-secondary mt-3'>
+            <ol className='text-slate-100 bg-slate-500 mt-3'>
 
               {this.state.list.map(item => {
                 return (
-                  <li key={item.id} >
+                  <li className='text-slate-100' key={item.id} >
                     {item.value}
 
-                    <button className='m-2 btn btn-danger' onClick={() => this.deleteItem(item.id)}>x</button>
+                    <button className='rounded-full m-2 btn btn-danger' onClick={() => this.deleteItem(item.id)}>x</button>
                   </li>
                 );
               })}
